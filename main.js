@@ -1,12 +1,18 @@
 let container = document.getElementById("container");
 let button = document.querySelector("button")
 let stuff = document.querySelectorAll(".recipecontainer")
-let getInit = {
-  method: "get",
-  mode: "no-cors",
-}
+// let getInit = {
+//   method: "get",
+//   mode: "no-cors",
+// }
+button.addEventListener("click", function(){
+  let input = document.getElementById("SearchBox");
+  let entry = "https://recipepuppyproxy.herokuapp.com/api/?q=" + input.value;
+  // container.innerHTML = "";
+  // console.log(container);
 
-fetch("https://recipepuppyproxy.herokuapp.com/api/?i=onions,garlic&q=omelet&p=3")
+
+fetch(entry)
 
   .then(function(response) {
       if (response.status !== 200) {
@@ -28,7 +34,8 @@ fetch("https://recipepuppyproxy.herokuapp.com/api/?i=onions,garlic&q=omelet&p=3"
       });
     }
   )
-  
+
   .catch(function(error) {
     console.log("Fetch Error :-S", error);
   });
+})
