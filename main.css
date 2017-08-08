@@ -1,0 +1,36 @@
+/*.body {
+  display: flex;
+  flex-wrap: wrap;
+}*/
+
+
+#search_button {
+  padding: 15px;
+  width: 50%;
+  margin: 50px;
+  border-color:  black;
+}
+
+input  type {
+    width: 100%;
+}
+
+#hr {
+border-top: 3px solid black;
+width: 95%;
+}
+
+
+
+#container div {
+  height: 250px;
+  width: 20%;
+  border: 2px solid black;
+  margin-left: 30px;
+  margin-top:  50px;
+
+  display: flex;
+align-items: center;
+float: left;
+display: inline-block;
+}
